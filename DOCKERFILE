@@ -2,7 +2,7 @@
 FROM node:18-alpine
 
 # Set working directory inside the container
-WORKDIR /Lab2
+WORKDIR /Lab
 
 # Copy dependency definitions
 COPY package*.json ./
