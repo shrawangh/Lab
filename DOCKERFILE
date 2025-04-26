@@ -1,0 +1,20 @@
+# Choose the right base image
+FROM node:18-alpine
+
+# Set working directory inside the container
+WORKDIR /Lab2
+
+# Copy dependency definitions
+COPY package*.json ./
+
+# Install dependencies
+RUN npm install --production
+
+# Copy application code
+COPY . .
+
+# Expose the microservice's port
+EXPOSE 3000
+
+# Run the microservice
+CMD ["npm", "start"]
